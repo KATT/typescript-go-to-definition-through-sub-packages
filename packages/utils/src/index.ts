@@ -1,6 +1,6 @@
 type Fn = (...args: any[]) => any;
 type RouterRecord = {
-	[key: string]: Fn | RouterRecord;
+	[key: string]: Procedure<ProcedureDef> | RouterRecord;
 };
 
 type ProcedureDef = {
@@ -27,7 +27,7 @@ export type DecoratedRouter<T extends RouterRecord> = {
 				: never
 		: never;
 };
-// test
+
 export function createRouter<T extends RouterRecord>(routes: T) {
 	return routes as never as DecoratedRouter<T>;
 }
