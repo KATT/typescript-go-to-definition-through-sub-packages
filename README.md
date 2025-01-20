@@ -1,6 +1,6 @@
 # TypeScript Monorepo Demo
 
-This repository demonstrates an ~~issue~~ lack of feature in TypeScript's "Jump to Definition" functionality when working with nested package imports in a monorepo.
+This repository demonstrates a limitation in TypeScript's "Go to Definition" functionality when working with nested package imports in a monorepo. While upcoming improvements in TypeScript ([PR #60005](https://github.com/microsoft/TypeScript/pull/60005)) have partially addressed this issue, some limitations still remain with deeply nested property access.
 
 ## Setup Instructions
 
@@ -18,7 +18,7 @@ pnpm dev
 
 ## Problem Explanation
 
-TypeScript's "Jump to Definition" does not work through multiple levels of package imports. Here's the setup:
+TypeScript's "Go to Definition" does not work through multiple levels of package imports. Here's the setup:
 
 1. Package `@org/a` defines a base object:
 
@@ -36,8 +36,9 @@ TypeScript's "Jump to Definition" does not work through multiple levels of packa
    ```typescript
    import { a } from '@org/a';
 
-   a; // ✅ Jump to definition works here
-   a.foo; // ✅ Jump to definition works here
+   a; // ✅ Go to definition works here with ^5.7.3
+   a.foo; // 🚧 Go to definition does not works here, but seemingly fixed by https://github.com/microsoft/TypeScript/pull/60005
+   // ^?
 
    export const b = {
    	a,
@@ -49,9 +50,9 @@ TypeScript's "Jump to Definition" does not work through multiple levels of packa
    ```typescript
    import { b } from '@org/b';
 
-   b; // ✅ Jump to definition works here
-   b.a; // ❌ Jump to definition fails here
-   b.a.foo; // ❌ Jump to definition fails here
+   b; // 🚧 Go to definition does not works here, but seemingly fixed by https://github.com/microsoft/TypeScript/pull/60005
+   b.a; // <--- 🚧 Go to definition does not works here, but seemingly fixed by https://github.com/microsoft/TypeScript/pull/60005
+   b.a.foo; // <--- ❌ Go to definition does not work here
    ```
 
 ## Expected Behavior
@@ -60,8 +61,8 @@ Jumping to definition should work through multiple levels of package imports as 
 
 ## Current Behavior
 
-- In package `@org/b`, TypeScript's "Jump to Definition" works as expected when clicking on `a.foo`
-- In package `@org/c`, "Jump to Definition" does **not** work as expected when trying to navigate through the re-exported property `b.a.foo`
+- In package `@org/b`, TypeScript's "Go to Definition" works as expected when clicking on `a.foo`
+- In package `@org/c`, "Go to Definition" does **not** work as expected when trying to navigate through the re-exported property `b.a.foo`
 
 ## Technical Details
 

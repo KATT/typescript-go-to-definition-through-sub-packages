@@ -1,5 +1,5 @@
 import { b } from '@org/b';
 
-b; // <-- ✅ goes to the definition of b
-b.a; // <--- ❌ goes to the definition of b (should be a)
-b.a.foo; // <--- ❌ goes to the definition of b (should be a.foo)
+b; // 🚧 Go to definition does not works here, but seemingly fixed by https://github.com/microsoft/TypeScript/pull/60005
+b.a; // <--- 🚧 Go to definition does not works here, but seemingly fixed by https://github.com/microsoft/TypeScript/pull/60005
+b.a.foo; // <--- ❌ Go to definition does not work here
