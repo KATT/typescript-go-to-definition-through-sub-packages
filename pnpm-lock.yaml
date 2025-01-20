@@ -23,22 +23,24 @@ importers:
       '@org/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/tsconfig
+      '@org/utils':
+        specifier: workspace:*
+        version: link:../utils
 
   packages/b:
     dependencies:
       '@org/a':
         specifier: workspace:*
         version: link:../a
+      '@org/utils':
+        specifier: workspace:*
+        version: link:../utils
     devDependencies:
       '@org/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/tsconfig
 
-  packages/c:
-    dependencies:
-      '@org/b':
-        specifier: workspace:*
-        version: link:../b
+  packages/utils:
     devDependencies:
       '@org/tsconfig':
         specifier: workspace:*

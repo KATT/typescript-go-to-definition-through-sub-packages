@@ -15,6 +15,7 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@org/tsconfig": "workspace:*"
+		"@org/tsconfig": "workspace:*",
+		"@org/utils": "workspace:*"
 	}
 }

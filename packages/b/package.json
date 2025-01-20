@@ -14,7 +14,8 @@
 		"build": "tsc"
 	},
 	"dependencies": {
-		"@org/a": "workspace:*"
+		"@org/a": "workspace:*",
+		"@org/utils": "workspace:*"
 	},
 	"devDependencies": {
 		"@org/tsconfig": "workspace:*"

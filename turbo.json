@@ -3,7 +3,7 @@
 	"tasks": {
 		"build": {
 			"dependsOn": ["^build"],
-			"inputs": ["$TURBO_DEFAULT$", ".env*"],
+			"inputs": ["$TURBO_DEFAULT$", ".env*", "**/*.{ts,tsx}"],
 			"outputs": ["dist/**", "tsconfig.tsbuildinfo"],
 			"persistent": false,
 			"cache": true
