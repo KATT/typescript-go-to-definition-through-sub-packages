@@ -15,8 +15,8 @@ importers:
         specifier: ^2.3.3
         version: 2.3.3
       typescript:
-        specifier: ^5.7.3
-        version: 5.7.3
+        specifier: npm:@kitchensink/typescript-pr60005@latest
+        version: '@kitchensink/typescript-pr60005@5.8.0'
 
   packages/a:
     devDependencies:
@@ -47,6 +47,11 @@ importers:
   tooling/tsconfig: {}
 
 packages:
+
+  '@kitchensink/typescript-pr60005@5.8.0':
+    resolution: {integrity: sha512-DRtc5P9qrqIMM9y10jBQ0UVULL7b0iC5B8zCJQOWiiLPpP0uLST5XPHt4uVZqEDhbbompsmvt0j7VBKl2omAnQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
 
   prettier@3.4.2:
     resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
@@ -87,12 +92,9 @@ packages:
     resolution: {integrity: sha512-DUHWQAcC8BTiUZDRzAYGvpSpGLiaOQPfYXlCieQbwUvmml/LRGIe3raKdrOPOoiX0DYlzxs2nH6BoWJoZrj8hA==}
     hasBin: true
 
-  typescript@5.7.3:
-    resolution: {integrity: sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==}
-    engines: {node: '>=14.17'}
-    hasBin: true
-
 snapshots:
+
+  '@kitchensink/typescript-pr60005@5.8.0': {}
 
   prettier@3.4.2: {}
 
@@ -122,5 +124,3 @@ snapshots:
       turbo-linux-arm64: 2.3.3
       turbo-windows-64: 2.3.3
       turbo-windows-arm64: 2.3.3
-
-  typescript@5.7.3: {}
