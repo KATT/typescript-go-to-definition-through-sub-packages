@@ -5,8 +5,8 @@ This repository demonstrates a limitation in TypeScript's "Go to Definition" fun
 ## Setup Instructions
 
 ```shell
-git clone git@github.com:KATT/typescript-jump-to-definition-through-sub-packages.git
-cd typescript-jump-to-definition-through-sub-packages
+git clone git@github.com:KATT/typescript-go-to-definition-through-sub-packages.git
+cd typescript-go-to-definition-through-sub-packages
 pnpm i
 ```
 
@@ -57,7 +57,7 @@ TypeScript's "Go to Definition" does not work through multiple levels of package
 
 ## Expected Behavior
 
-Jumping to definition should work through multiple levels of package imports as if the code was written in a single file.
+Go to definition should work through multiple levels of package imports as if the code was written in a single file.
 
 ## Current Behavior
 
