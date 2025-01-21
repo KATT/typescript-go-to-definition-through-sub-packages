@@ -1,8 +1,10 @@
-export const a = {
+import { t } from '@org/utils';
+
+export const a = t.router({
 	foo: () => 'foo',
 	bar: () => 'bar',
 	baz: () => 'baz',
 	qux: () => 'qux',
-} as const;
+});
 
 a.bar; // ✅ Go to definition works here

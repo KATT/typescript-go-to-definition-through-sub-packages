@@ -23,28 +23,24 @@ importers:
 
   packages/a:
     dependencies:
-      '@trpc/client':
-        specifier: 11.0.0-rc.708
-        version: 11.0.0-rc.708(@trpc/server@11.0.0-rc.708(typescript@5.7.3))(typescript@5.7.3)
-      '@trpc/react-query':
-        specifier: 11.0.0-rc.708
-        version: 11.0.0-rc.708(@tanstack/react-query@5.64.2(react@19.0.0))(@trpc/client@11.0.0-rc.708(@trpc/server@11.0.0-rc.708(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.0.0-rc.708(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)
-      '@trpc/server':
-        specifier: 11.0.0-rc.708
-        version: 11.0.0-rc.708(typescript@5.7.3)
-    devDependencies:
       '@org/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/tsconfig
       '@org/utils':
         specifier: workspace:*
         version: link:../utils
+      '@trpc/server':
+        specifier: 11.0.0-rc.708
+        version: 11.0.0-rc.708(typescript@5.7.3)
 
   packages/b:
     dependencies:
       '@org/a':
         specifier: workspace:*
         version: link:../a
+      '@org/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/tsconfig
       '@org/utils':
         specifier: workspace:*
         version: link:../utils
@@ -57,26 +53,15 @@ importers:
       '@trpc/server':
         specifier: 11.0.0-rc.708
         version: 11.0.0-rc.708(typescript@5.7.3)
-    devDependencies:
-      '@org/tsconfig':
-        specifier: workspace:*
-        version: link:../../tooling/tsconfig
 
   packages/utils:
     dependencies:
-      '@trpc/client':
-        specifier: 11.0.0-rc.708
-        version: 11.0.0-rc.708(@trpc/server@11.0.0-rc.708(typescript@5.7.3))(typescript@5.7.3)
-      '@trpc/react-query':
-        specifier: 11.0.0-rc.708
-        version: 11.0.0-rc.708(@tanstack/react-query@5.64.2(react@19.0.0))(@trpc/client@11.0.0-rc.708(@trpc/server@11.0.0-rc.708(typescript@5.7.3))(typescript@5.7.3))(@trpc/server@11.0.0-rc.708(typescript@5.7.3))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.7.3)
-      '@trpc/server':
-        specifier: 11.0.0-rc.708
-        version: 11.0.0-rc.708(typescript@5.7.3)
-    devDependencies:
       '@org/tsconfig':
         specifier: workspace:*
         version: link:../../tooling/tsconfig
+      '@trpc/server':
+        specifier: 11.0.0-rc.708
+        version: 11.0.0-rc.708(typescript@5.7.3)
 
   tooling/tsconfig: {}
 
