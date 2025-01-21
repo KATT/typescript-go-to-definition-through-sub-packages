@@ -9,7 +9,7 @@
 		"watch": "turbo watch build",
 		"dev": "turbo watch build",
 		"postinstall": "pnpm build",
-		"clean": "rimraf -g **/*.tsbuildinfo **/.turbo **/dist"
+		"clean": "rimraf -g **/*.tsbuildinfo **/.turbo **/dist **/node_modules"
 	},
 	"dependencies": {
 		"prettier": "^3.4.2",
