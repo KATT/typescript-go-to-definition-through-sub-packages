@@ -13,8 +13,8 @@
 	"scripts": {
 		"build": "tsc"
 	},
-	"dependencies": {},
-	"devDependencies": {
+	"dependencies": {
+		"@trpc/server": "11.0.0-rc.708",
 		"@org/tsconfig": "workspace:*"
 	}
 }

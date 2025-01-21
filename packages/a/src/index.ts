@@ -1,10 +1,8 @@
-import { createProcedure, createRouter } from '@org/utils';
-
-export const a = createRouter({
-	foo: createProcedure(() => 'foo'),
-	bar: createProcedure(() => 'bar'),
-	baz: createProcedure(() => 'baz'),
-	qux: createProcedure(() => 'qux'),
-});
+export const a = {
+	foo: () => 'foo',
+	bar: () => 'bar',
+	baz: () => 'baz',
+	qux: () => 'qux',
+} as const;
 
 a.bar; // ✅ Go to definition works here
